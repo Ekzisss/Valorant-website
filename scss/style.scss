@@ -1,0 +1,320 @@
+@import "reset.scss";
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+@font-face {
+    font-family: "Druk Wide";
+    src: url("../font/Druk-WideMedium.eot");
+    src: url("../font/Druk-WideMedium.eot?#iefix") format("embedded-opentype"),
+        url("../font/Druk-WideMedium.woff2") format("woff2"), url("../font/Druk-WideMedium.woff") format("woff"),
+        url("../font/Druk-WideMedium.ttf") format("truetype"),
+        url("../font/Druk-WideMedium.svg#Druk-WideMedium") format("svg");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+/*–––––––––––––––body–––––––––––––––*/
+
+body {
+    color: white;
+    font-family: "Druk Wide";
+    overflow: hidden;
+}
+
+/*–––––––––––––––container–––––––––––––––*/
+
+.container {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0px 40px;
+}
+
+.dropdown {
+    display: flex;
+    gap: 5px;
+    position: relative;
+    &::after {
+        content: "";
+        width: 0;
+        height: 0;
+        border-top: 4px solid white;
+        border-right: 4px solid transparent;
+
+        border-left: 4px solid transparent;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translate(150%, -50%);
+    }
+}
+/*–––––––––––––––header–––––––––––––––*/
+
+.header {
+    background-color: #1f2326;
+    height: 60px;
+    font-weight: 700;
+    font-size: 10px;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+
+        font-family: "Montserrat";
+    }
+
+    &__left-side {
+        display: flex;
+        gap: 60px;
+        height: 25px;
+    }
+
+    &__icons {
+        display: flex;
+        align-items: center;
+        gap: 70px;
+        position: relative;
+
+        &::after {
+            content: "";
+            height: 100%;
+            width: 2px;
+            background-color: white;
+            position: absolute;
+            left: 57%;
+            top: 0;
+        }
+    }
+
+    &__riot-icon {
+        height: 100%;
+    }
+
+    &__valorant-icon {
+        height: 100%;
+    }
+
+    &__nav {
+        display: flex;
+        gap: 30px;
+        text-transform: uppercase;
+        align-items: center;
+    }
+
+    &__nav-item {
+    }
+
+    &__right-side {
+        height: 25px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    &__profile-icon {
+        border-radius: 100%;
+        height: 100%;
+    }
+
+    &__profile-nickname {
+    }
+}
+
+/*–––––––––––––––charecters–––––––––––––––*/
+
+.charecters {
+    background: no-repeat url("../img/background.png") #ff4656;
+    height: 88vh;
+    .container {
+        display: flex;
+        gap: 50px;
+        justify-content: flex-end;
+        align-items: center;
+        height: 90%;
+        padding: 100px 0;
+        position: relative;
+        left: 50px;
+    }
+
+    &__title {
+        color: transparent;
+        text-transform: uppercase;
+        font-size: 100px;
+        transform: rotate(90deg);
+        -webkit-text-stroke: 1px white;
+        text-stroke: 1px white;
+
+        position: absolute;
+        // top: -40%;
+        left: -180px;
+    }
+
+    &__item {
+        height: 100%;
+        background-color: #1f2326;
+        border-top-left-radius: 20px;
+        position: relative;
+
+        &_white {
+            background-color: white;
+            border: #1f2326 solid 1px;
+
+            .charecters-item__texts .charecters-item__name {
+                -webkit-text-stroke: 1px #1f2326;
+                text-stroke: 1px #1f2326;
+            }
+
+            .charecters-item__skills {
+                background-color: white;
+                border-color: #1f2326;
+            }
+        }
+    }
+
+    &__elements {
+        position: absolute;
+        top: 40px;
+        left: 0;
+        width: auto;
+        height: 90%;
+    }
+}
+.charecters-item {
+    &__portret {
+        height: 100%;
+    }
+
+    &__texts {
+        transform: rotate(90deg) translateY(-65%);
+        position: absolute;
+        transform-origin: 0 0;
+        top: 30px;
+        left: 0;
+    }
+
+    &__name {
+        font-size: 55px;
+        color: transparent;
+        -webkit-text-stroke: 1px white;
+        text-stroke: 1px white;
+    }
+
+    &__country {
+        font-size: 20px;
+        color: #ff4656;
+    }
+
+    &__skills {
+        width: 100%;
+        height: 80px;
+        background-color: #1f2326;
+        border: white 1px solid;
+        position: relative;
+        bottom: 0;
+        transform: translateY(-70%) translateX(5%);
+
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        img {
+            max-width: 45px;
+            max-height: 45px;
+        }
+    }
+}
+
+/*–––––––––––––––abilitys–––––––––––––––*/
+
+.ability {
+    position: relative;
+    top: -120px;
+    .container {
+        display: flex;
+        justify-content: center;
+        gap: 60px;
+        position: relative;
+        left: -60px;
+        padding: 0;
+        max-width: max-content;
+    }
+
+    &__item {
+        height: 150px;
+        width: 445px;
+        background-color: white;
+        border: #1f2326 1px solid;
+        border-top-left-radius: 20px;
+        color: #1f2326;
+
+        display: flex;
+        position: relative;
+        gap: 50px;
+    }
+
+    &__left-side {
+        padding: 20px 40px;
+        padding-right: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 50%;
+    }
+
+    &__type {
+        font-size: 25px;
+        color: #c4c4c4;
+        font-weight: 500;
+    }
+
+    &__name {
+        color: #000000;
+    }
+
+    &__disc {
+        font-family: "Montserrat";
+        font-weight: 400;
+        z-index: 1;
+        font-size: 12px;
+    }
+
+    &__logo {
+        max-width: 100px;
+        max-height: 100px;
+        margin: auto;
+        position: relative;
+        top: -10px;
+        z-index: 1;
+    }
+
+    &__next {
+        width: 140px;
+        position: relative;
+
+        &::after {
+            content: "";
+            width: 0;
+            height: 0;
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+
+            border-left: 10px solid #1f2326;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    &__decoration {
+        width: 110px;
+        height: 110px;
+        background-color: #ff4656;
+        position: absolute;
+        right: 69px;
+        bottom: 0;
+        z-index: 0;
+    }
+}
